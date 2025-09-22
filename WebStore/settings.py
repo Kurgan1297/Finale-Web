@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'WS',
 ]
+# 'auth_application'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
