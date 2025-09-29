@@ -7,7 +7,7 @@ class User():
 
 
 
-class Product_type(self):
+class Product_type(models.Model):
     Ready_to_sell_Bikes = models.CharField(max_length=15)
     Wheels = models.CharField(max_length=20)
     Bike_gear = models.CharField(max_length=20)
@@ -17,7 +17,9 @@ class Product_type(self):
 
 
 
-class Bike_Type(self):
+class Bike_Type(models.Model):
+    name = models.CharField(max_length=20)
+    description = models.TextField(max_length=1024)
     Mountain_bikes = models.CharField()
     City_bikes = models.CharField()
     Light_bikes = models.CharField()
@@ -37,7 +39,7 @@ class Bike_Type(self):
 
 
     
-class Wheel_type(self):
+class Wheel_type(models.Model):
     Mountain = models.CharField()
     City = models.CharField()
     Light = models.CharField()
@@ -56,13 +58,13 @@ class Wheel_type(self):
 
 
     
-class Wheel_size(self):
-    twenty_d = models.CharField()
-    twenty_four_d = models.CharField()
-    twenty_six_d = models.CharField()
-    twenty_eight_d = models.CharField()
-    twenty_nine_d = models.CharField()
+class Wheel_size(models.Model):
+    twenty_d = models.IntegerField()
+    twenty_four_d = models.IntegerField()
+    twenty_six_d = models.IntegerField()
+    twenty_eight_d = models.IntegerField()
+    twenty_nine_d = models.IntegerField()
 
     
-class (self):
-    
+class (models.Model):
+    x = models.CharField(2)

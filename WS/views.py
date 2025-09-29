@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.views.generic import View
 
-class TestView(View):
+class HomeView(View):
     def get(self, request):
         return render(request, 'base.html')
     
@@ -12,3 +12,5 @@ class TestView(View):
 class ShopView(View):
     def get(self, request):
         return render(request, 'main_store.html')
+    
+
