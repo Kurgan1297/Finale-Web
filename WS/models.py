@@ -12,19 +12,18 @@ class Product_type(models.Model):
     Wheels = models.CharField(max_length=20)
     Bike_gear = models.CharField(max_length=20)
     Accessories = models.CharField(max_length=20)
-    x = models.CharField()
-    x = models.CharField()
-
+    # x = models.CharField()
+    # x = models.CharField()
 
 
 class Bike_Type(models.Model):
     name = models.CharField(max_length=20)
     description = models.TextField(max_length=1024)
-    Mountain_bikes = models.CharField()
-    City_bikes = models.CharField()
-    Light_bikes = models.CharField()
-    Sport_bikes = models.CharField()
-    x = models.CharField()
+    Mountain_bikes = models.CharField(50)
+    City_bikes = models.CharField(50)
+    Light_bikes = models.CharField(50)
+    Sport_bikes = models.CharField(50)
+    Price = models.IntegerField(10)
     x = models.CharField()
     
 
@@ -40,12 +39,12 @@ class Bike_Type(models.Model):
 
     
 class Wheel_type(models.Model):
-    Mountain = models.CharField()
-    City = models.CharField()
-    Light = models.CharField()
-    Sport = models.CharField()
-    x = models.CharField()
-    x = models.CharField()
+    Mountain = models.CharField(50)
+    City = models.CharField(50)
+    Light = models.CharField(50)
+    Sport = models.CharField(50)
+    # x = models.CharField()
+    # x = models.CharField()
 
 
     
@@ -59,12 +58,10 @@ class Wheel_type(models.Model):
 
     
 class Wheel_size(models.Model):
-    twenty_d = models.IntegerField()
-    twenty_four_d = models.IntegerField()
-    twenty_six_d = models.IntegerField()
-    twenty_eight_d = models.IntegerField()
-    twenty_nine_d = models.IntegerField()
+    twenty_d = models.IntegerField(5)
+    twenty_four_d = models.IntegerField(5)
+    twenty_six_d = models.IntegerField(5)
+    twenty_eight_d = models.IntegerField(5)
+    twenty_nine_d = models.IntegerField(5)
 
     
-class (models.Model):
-    x = models.CharField(2)

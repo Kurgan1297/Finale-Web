@@ -7,7 +7,7 @@ class HomeView(View):
         return render(request, 'base.html')
     
     def post(self, request):
-        pass
+        return render(request, 'base.html')
     
 class ShopView(View):
     def get(self, request):
