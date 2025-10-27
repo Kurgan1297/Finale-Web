@@ -1,4 +1,4 @@
 from django.contrib import admin
-from BW.models import Post
+from BW.models import Bikes
 
-admin.site.register(Post)
+admin.site.register(Bikes)
