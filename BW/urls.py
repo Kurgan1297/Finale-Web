@@ -3,7 +3,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from WS.views import HomeView, ShopView
+from BW.views import HomeView, ShopView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='greetings_page'),

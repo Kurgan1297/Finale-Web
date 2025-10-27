@@ -1,0 +1,36 @@
+{% extends 'basics.html' %}
+
+
+{% block content %}
+
+<h2><i>Велосипеди з результату {filter}</i></h2>
+
+{% for bike in all_bikes %}
+    <div>
+        <p>{{ bike.name }}</p>
+        <p>{{ bike.price }}</p>
+        <p>opisanie: {{ bike.description }}</p>
+        <p>Amount: {{ bike.amount}}</p>
+    </div>
+{% endfor %}
+
+
+
+<nav aria-label="navv">
+    <ul class="paginaton">
+        <li class="page_item">
+            <a class="page-link {% if not all_bikes.has_previous %} disabled {% endif %}" href="{% if all_bikes.has_previous %} {% url 'posts_page' %}?page={{ all_bikes.previous_page_number }} {% endif %}">
+                Back
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link {% if not all_bikes.has_next %} disabled {% endif %}" href="{% if all_bikes.has_next %} {% url 'posts_page' %}?page={{ all_bikes.next_page_number }} {% endif %}">
+                Forward
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+{% endblock %}

@@ -10,12 +10,6 @@ class Bikes(models.Model):
         
     ]
 
-    # count = [
-    #     (1, "-"),
-    #     (2, "-"),
-    #     (3, "-"),
-    # ]
-
     bike_type = models.IntegerField(choices=bike_types, default=4)
     
     name = models.CharField(max_length=25)
@@ -74,3 +68,9 @@ class Bikes(models.Model):
 #     twenty_nine_d = models.IntegerField(5)
 
     
+
+    # count = [
+    #     (1, "-"),
+    #     (2, "-"),
+    #     (3, "-"),
+    # ]
