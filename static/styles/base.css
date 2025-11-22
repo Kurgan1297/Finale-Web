@@ -1,0 +1,123 @@
+header{
+    margin: 20px 10px;
+    font-style:italic;
+}
+
+body{
+    padding: 16px; 
+    flex: 1;
+    background-color: #1c9e29a8;
+    
+}
+
+footer{
+    padding-left: 600px;
+    border-block-color: rgb(0, 38, 255);
+}
+
+.bike-card {
+    border: 2px solid #203731e2;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 35px;
+    background-color: #099a6fe2;
+}
+
+.grid-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 35px;
+}
+
+.bike-price, .bike-desc, .bike-amount {
+    color: rgba(29, 113, 57, 0.818);
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 5px;
+    -webkit-text-stroke: 0.25px rgba(0, 0, 0, 0.364);
+
+}
+
+.bike-photo {
+    margin-left: 50%;
+    margin: 4px
+}
+
+.bike-name {    
+    color: rgba(5, 58, 30, 0.677);
+}
+
+.buy-button {
+    background-color: rgba(14, 173, 88, 0.86);
+    margin-left: 4px;
+    margin-bottom: 8px;
+    border-radius: 50px;
+}
+
+.bike-name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    transition: .3s;
+    position: relative;
+}
+
+.bike-name:hover {
+    font-size: 24px;
+    color: rgb(0, 255, 60, 0.742);
+}
+
+.bike-desc {
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    background-color: rgba(240, 248, 255, 0.829);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.bike-name:hover .bike-desc {
+    visibility: visible;
+    opacity: 1;
+}
+
+.bike-link {
+    text-decoration: none;
+    text-decoration: underline;
+    color: rgba(0, 255, 60, 0.742);
+    font-weight: 520;
+    font-size: 24px
+}
+
+.bike-reg-edit {
+    text-decoration: none;
+    font-weight: 5000;
+    color: rgba(0, 255, 60, 0.742);
+    margin-left: 5px;
+    text-decoration: underline;
+
+}
+
+.bike-reg-edit-v2 {
+    border: 2px solid black;
+    background-color:rgba(19, 126, 39, 0.627);
+}
+
+.bike-reg-name {
+    font-weight: 800;
+    color:rgb(5, 58, 30);   
+    margin-left: 8px
+}
+
+.bike-reg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.bike-search {
+    background-color: rgba(0, 255, 60, 0.581);
+}

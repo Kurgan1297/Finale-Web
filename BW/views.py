@@ -5,21 +5,28 @@ from django.views.generic import View
 from django.core import paginator
 
 from BW.models import Bikes
-
+from BW.forms import FilterForm
 
 
 class ShopView(View):
     def get(self, request):
 
-        #
+        form = FilterForm()
 
-        all_bikes = Bikes.objects.all()
-        bikes_p = paginator.Paginator(all_bikes, 5)
+        bike_type = self.request.GET.get("bike_type", None)
+
+        if bike_type is None:
+            all_bikes = Bikes.objects.all()
+        else:
+            all_bikes = Bikes.objects.filter(bike_type=bike_type)
+
+        bikes_p = paginator.Paginator(all_bikes, 9)
         page_now = request.GET.get("page")
         page_bikes = bikes_p.get_page(page_now)
 
         return render(request, 'store.html', context={
-            "all_bikes": page_bikes
+            "all_bikes": page_bikes,
+            "filter_form": form
         })
 
     def post(self, request):
@@ -32,13 +39,22 @@ class HomeView(View):
     def post(self, request):
         return render(request, "greetings.html")
 
-class DescitptionView(View):
+
+class AboutView(View):
     def get(self, request):
-        
-        
+        return render(request, 'about.html')
+    
+    def post(self, request):
+        return render(request, "about.html")
+    
 
+class DescitptionView(View):
+    def get(self, request, bikeid):
 
-        return render(request, "bike_page.html")
+        bike_info = Bikes.objects.filter(id=bikeid).last()
+        print(bike_info)        
+
+        return render(request, "bike_page.html", context={"bike_info":bike_info})
 
     def post():
         pass    
