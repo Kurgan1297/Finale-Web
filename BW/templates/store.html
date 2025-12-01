@@ -35,12 +35,12 @@
     <ul class="paginaton">
         <li class="page_item">
             <a class="page-link {% if not all_bikes.has_previous %} disabled {% endif %}" href="{% if all_bikes.has_previous %} {% url 'main_store_page' %}?page={{ all_bikes.previous_page_number }} {% endif %}">
-                Back
+                <h4 class="bike-page-back-forward">Back</h4>
             </a>
         </li>
         <li class="page-item">
             <a class="page-link {% if not all_bikes.has_next %} disabled {% endif %}" href="{% if all_bikes.has_next %} {% url 'main_store_page' %}?page={{ all_bikes.next_page_number }} {% endif %}">
-                Forward
+                <h4 class="bike-page-back-forward">Forward</h4>
             </a>
         </li>
     </ul>

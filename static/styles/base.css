@@ -20,7 +20,7 @@ footer{
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 35px;
-    background-color: #099a6fe2;
+    background-color: #7fbb77e2;
 }
 
 .grid-page {
@@ -120,4 +120,10 @@ footer{
 
 .bike-search {
     background-color: rgba(0, 255, 60, 0.581);
+}
+
+.bike-page-back-forward {
+    text-decoration: underline;  
+    color:rgba(11, 115, 60, 0.86);
+    font-style: italic
 }

@@ -56,5 +56,8 @@ class DescitptionView(View):
 
         return render(request, "bike_page.html", context={"bike_info":bike_info})
 
-    def post():
-        pass    
+    def post(self, request):
+        # bike_name = request.POST.get("bike_name")
+        # bike_name = request.POST.get("bike_name")
+
+        pass
